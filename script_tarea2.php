@@ -35,6 +35,7 @@ if (($gestor = fopen("products.csv", "r")) !== FALSE) {
    
 		$arrayDatos = explode(",", $fila);
 		$id = $arrayDatos[0];
+		$product = $id_product ? new Product((int)$id_product, true) : new Product();
 		$Active = $arrayDatos[1];
 		$Nombre = $arrayDatos[2];
 		$Referencia = $arrayDatos[3];
